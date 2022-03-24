@@ -8,6 +8,7 @@ namespace TheSumNumbers
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+			
 			//var data = new int[] { 12, 3, 1, 2, -6, 5, -8, 6 };
 			var data = new int[] { -1, 0, 1, 2, -1, -4 };
 			int target = 0;
@@ -39,10 +40,9 @@ namespace TheSumNumbers
 			}
 			watch.Stop();
 			Console.WriteLine($"Task Ends Four sums {watch.ElapsedMilliseconds} ms");
-
-
 		}
 
+		//https://leetcode.com/problems/3sum/
 		static List<int[]> ThreeNumberSum(int[] array, int targetSum)
 		{
 			// Write your code here.
@@ -129,6 +129,54 @@ namespace TheSumNumbers
 			}
 
 			return result;
+		}
+
+		//https://leetcode.com/problems/4sum/
+		public IList<IList<int>> FourSum(int[] nums, int target)
+		{
+
+			Array.Sort(nums);
+			List<IList<int>> result = new List<IList<int>>();
+			HashSet<string> handleDuplicate = new HashSet<string>();
+			int length = nums.Length;
+
+			for (int i = 0; i < length; i++)
+			{
+				for (int j = i + 1; j < length; j++)
+				{
+					int left = j + 1;
+					int right = length - 1;
+
+					while (left < right)
+					{
+						int sum = nums[i] + nums[j] + nums[left] + nums[right];
+						if (sum == target)
+						{
+							List<int> data = new List<int> { nums[i], nums[j], nums[left], nums[right] };
+							string checkData = string.Join(",", data);
+
+							if (!handleDuplicate.Contains(checkData))
+							{
+								result.Add(data);
+								handleDuplicate.Add(checkData);
+							}
+							left++;
+							right--;
+						}
+						else if (sum < target)
+						{
+							left++;
+						}
+						else
+						{
+							right--;
+						}
+					}
+				}
+			}
+
+			return result;
+
 		}
 	}
 
