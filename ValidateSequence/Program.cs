@@ -26,6 +26,27 @@ namespace ValidateSequence
 
             return sequenceIndex == sequence.Count;
         }
+
+        public static bool IsValidSubsequenceV2(List<int> array, List<int> sequence)
+        {
+            // Write your code here.
+            int index = 0;
+
+            foreach (int value in array)
+            {
+                if (index == sequence.Count)
+                {
+                    break;
+                }
+
+                if (value == sequence[index])
+                {
+                    index++;
+                }
+            }
+
+            return index == sequence.Count;
+        }
     }
 
 }
