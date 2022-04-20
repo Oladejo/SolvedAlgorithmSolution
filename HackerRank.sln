@@ -17,9 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TreePathLarger", "TreePathL
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSumNumbers", "TheSumNumbers\TheSumNumbers.csproj", "{76F4F525-6B31-4828-A5D2-F3035903DE05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingPackage", "TestingPackage\TestingPackage.csproj", "{8D49E242-AF02-4A96-A397-C99AEC6C0ACD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestingPackage", "TestingPackage\TestingPackage.csproj", "{8D49E242-AF02-4A96-A397-C99AEC6C0ACD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidateSequence", "ValidateSequence\ValidateSequence.csproj", "{486D9E49-7C70-40CB-8CCE-D8DBEFB1A818}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValidateSequence", "ValidateSequence\ValidateSequence.csproj", "{486D9E49-7C70-40CB-8CCE-D8DBEFB1A818}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubSet", "SubSet\SubSet.csproj", "{43A77B68-D4B6-4EFB-9ACA-97ED700072C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{486D9E49-7C70-40CB-8CCE-D8DBEFB1A818}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{486D9E49-7C70-40CB-8CCE-D8DBEFB1A818}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{486D9E49-7C70-40CB-8CCE-D8DBEFB1A818}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43A77B68-D4B6-4EFB-9ACA-97ED700072C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43A77B68-D4B6-4EFB-9ACA-97ED700072C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43A77B68-D4B6-4EFB-9ACA-97ED700072C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43A77B68-D4B6-4EFB-9ACA-97ED700072C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
