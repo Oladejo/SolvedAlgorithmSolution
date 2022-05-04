@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestingPackage", "TestingPa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValidateSequence", "ValidateSequence\ValidateSequence.csproj", "{486D9E49-7C70-40CB-8CCE-D8DBEFB1A818}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubSet", "SubSet\SubSet.csproj", "{43A77B68-D4B6-4EFB-9ACA-97ED700072C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SubSet", "SubSet\SubSet.csproj", "{43A77B68-D4B6-4EFB-9ACA-97ED700072C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConversion", "CurrencyConversion\CurrencyConversion.csproj", "{AF30420F-D549-450B-A985-7D0176E2CE2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{43A77B68-D4B6-4EFB-9ACA-97ED700072C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43A77B68-D4B6-4EFB-9ACA-97ED700072C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43A77B68-D4B6-4EFB-9ACA-97ED700072C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF30420F-D549-450B-A985-7D0176E2CE2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF30420F-D549-450B-A985-7D0176E2CE2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF30420F-D549-450B-A985-7D0176E2CE2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF30420F-D549-450B-A985-7D0176E2CE2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
