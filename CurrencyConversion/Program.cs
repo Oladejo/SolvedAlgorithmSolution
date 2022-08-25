@@ -7,14 +7,16 @@ namespace CurrencyConversion
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(System.Reflection.Assembly.GetExecutingAssembly().Location);
+
             Console.WriteLine("Currency Conversion!");
             List<Node> nodes = new List<Node>();
             nodes.Add(new Node("USD", "JPY", 110));
             nodes.Add(new Node("USD", "AUD", 1.45));
             nodes.Add(new Node("JPY", "GBP", 0.0070));
 
-            Console.WriteLine(GetRatio("GBP", "AUD", nodes));
             Console.WriteLine(GetRatio("AUD", "JPY", nodes));
+            Console.WriteLine(GetRatio("GBP", "AUD", nodes));
         }
 
         public static double GetRatio(string start, string end, List<Node> data)
@@ -22,17 +24,20 @@ namespace CurrencyConversion
             Dictionary<string, Dictionary<string, double>> map = MapData(data);
 
             Queue<string> queue = new Queue<string>();
-            Queue<double> queueRatio = new Queue<double>();
+            //Queue<double> queueRatio = new Queue<double>();
+            double queueRatio = 1.0;
+            string pipeDelimited = start;
 
             queue.Enqueue(start);
-            queueRatio.Enqueue(1.0); 
+            //queueRatio.Enqueue(1.0); 
 
             HashSet<string> visited = new();
 
             while(queue.Count > 0)
             {
                 string current = queue.Dequeue();
-                double currentRatio = queueRatio.Dequeue();
+                //double currentRatio = queueRatio.Dequeue();
+                double currentRatio = queueRatio;
 
                 if (visited.Contains(current)) continue;
 
@@ -48,9 +53,12 @@ namespace CurrencyConversion
                             queue.Enqueue(key);
                             if (key.Equals(end))
                             {
+                                Console.WriteLine($"{ pipeDelimited } | { key }");
                                 return currentRatio * next[key];
                             }
-                            queueRatio.Enqueue(currentRatio * next[key]);
+                            //queueRatio.Enqueue(currentRatio * next[key]);
+                            queueRatio = currentRatio * next[key];
+                            pipeDelimited = $"{pipeDelimited} | {key}";
                         }
                     }
                 }
